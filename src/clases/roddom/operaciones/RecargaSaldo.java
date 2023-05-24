@@ -4,39 +4,6 @@ import java.util.Scanner;
 
 public class RecargaSaldo {
 
-    float monto;
-    int recarga, numeroRecarga;
-
-    public RecargaSaldo() {
-    }
-
-    public RecargaSaldo(float monto, int recarga) {
-        this.monto = monto;
-        this.recarga = recarga;
-    }
-
-    public float getMonto() {
-        return monto;
-    }
-
-    public void setMonto(float monto) {
-        this.monto = monto;
-    }
-
-    public int getRecarga() {
-        return recarga;
-    }
-
-    public void setRecarga(int recarga) {
-        this.recarga = recarga;
-    }
-
-    /*public static void recarga(){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Ingresa tu número a recargar");
-         int numeroRecarga = scanner.nextInt();
-    }*/
-
     public static void Recarga() {
         String numero = "";
         int opt = 0;
@@ -61,7 +28,6 @@ public class RecargaSaldo {
                 switch (opt) {
                     case 1 -> {
                         System.out.println("--Telcel--");
-                        do {
                             System.out.println("1.- recarga de 10");
                             System.out.println("2.- recarga de 20");
                             System.out.println("3.- recarga de 50");
@@ -87,11 +53,9 @@ public class RecargaSaldo {
                                     System.out.println("Tienes 20mb, 30sms, un dia de llamadas ilimitadas");
                                 }
                             }
-                        } while (opt1 != 5);
                     }
                     case 2 -> {
                         System.out.println("--MOVISTAR--");
-                        do {
                             System.out.println("1.- recarga de 10");
                             System.out.println("2.- recarga de 20");
                             System.out.println("3.- recarga de 50");
@@ -117,11 +81,10 @@ public class RecargaSaldo {
                                     System.out.println("Tienes 20mb, 30sms, un dia de llamadas ilimitadas");
                                 }
                             }
-                        } while (opt1 != 5);
                     }
                     case 3 -> {
                         System.out.println("--AT&T--");
-                        do {
+
                             System.out.println("1.- recarga de 10");
                             System.out.println("2.- recarga de 20");
                             System.out.println("3.- recarga de 50");
@@ -147,7 +110,6 @@ public class RecargaSaldo {
                                     System.out.println("Tienes 20mb, 30sms, un dia de llamadas ilimitadas");
                                 }
                             }
-                        } while (opt1 != 5);
                     }
                 }
             } while (opt != 4);

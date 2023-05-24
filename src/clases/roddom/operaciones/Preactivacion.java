@@ -1,33 +1,52 @@
 package clases.roddom.operaciones;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Preactivacion {
-    static Scanner scanner = new Scanner(System.in);
-    static int lada, numero1, numero2, numero3, numero4;
 
 
     public static void preactivacion() {
+        {
+            Scanner scanner = new Scanner(System.in);
+            int lada, numero1, numero2, numero3, numero4, numero5, numero6, numero7;
+            File f ;
+            try{
+                f = new File("registroactivacion.txt");
 
-        System.out.println("Ingrese la lada");
-        lada = scanner.nextInt();
+                if(f.createNewFile()){
 
-        numero1 = (int) (Math.random() * 8);
-        numero2 = (int) (Math.random() * 8);
-        numero3 = (int) (Math.random() * 8);
-        numero4 = (int) (Math.random() * 8);
+                }else {
+
+                    PrintWriter wr = new PrintWriter("registroactivacion.txt","UTF-8");
 
 
-        System.out.println("El numero es:");
-        System.out.print(lada);
-        System.out.print(numero1);
-        System.out.print(numero2);
-        System.out.print(numero3);
-        System.out.print(numero4);
+                    System.out.println("Ingrese la lada");
+                    lada = scanner.nextInt();
 
-        String dato;
-        System.out.println("¿Requiere el saldo de su línea?");
-        dato = scanner.nextLine();
+                    numero1 = (int) (Math.random() * 8);
+                    numero2 = (int) (Math.random() * 8);
+                    numero3 = (int) (Math.random() * 8);
+                    numero4 = (int) (Math.random() * 8);
+                    numero5 = (int) (Math.random() * 8);
+                    numero6 = (int) (Math.random() * 8);
+                    numero7 = (int) (Math.random() * 8);
+
+
+                    System.out.println("El numero es:");
+                    System.out.print("Con lada: " + lada+ " " + numero1 + numero2 + numero3 + " " + numero4 + numero5 + " " + numero6+numero7);
+
+
+                    wr.write("El numero es: " + lada +" "+ numero1+numero2+numero3+" "+numero4+numero5+" "+numero6+numero7);
+                    wr.close();
+                }
+
+            }catch (IOException e) {
+                System.out.println(e);
+            };
+        }
     }
 }
 

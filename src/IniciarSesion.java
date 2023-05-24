@@ -8,21 +8,26 @@ import java.util.Scanner;
 public class IniciarSesion {
 
     public static void inicioSesion() {
-        System.out.println("Acceso aL sistema");
+        System.out.println("ACCESO AL SISTEMA");
         Scanner datos = new Scanner(System.in);
-        int intento, contraseña = 2060, acceso = 0;
+        int intento, contraseña = 2060, acceso = 0, eleccion, opcion;
         do {
             System.out.println("INGRESA PIN DE SEGURIDAD");
             intento = datos.nextInt();
             if (intento == contraseña) {
                 System.out.println("NIP CORRECTO");
-                System.out.println("<><><><>BIENVENIDO<><><><>");
-                    System.out.println("1. Guardar Usuario 2.Activa tu línea, 3.Recarga Saldo, 4.Consultas");
-                    int eleccion = datos.nextInt();
+                System.out.println("    BIENVENIDO    ");
+                do {
+                    System.out.println("\n 1. Guardar Usuario 2.Activa tu línea, 3.Recarga Saldo, 4.Consultas 5. Salir");
+                    eleccion = datos.nextInt();
                     switch (eleccion) {
                         case 1 -> {
                             System.out.println("Guardar Usuario");
-                            InfoUsuario.registro();
+                            do {
+                                InfoUsuario.registro();
+                                System.out.println("Agregar Nuevo Usuario 1.SI 2.No");
+                                opcion = datos.nextInt();
+                            } while (opcion != 2);
                         }
                         case 2 -> {
                             System.out.println("Activa tu línea");
@@ -32,15 +37,15 @@ public class IniciarSesion {
                             System.out.println("Recarga Saldo");
                             RecargaSaldo.Recarga();
                         }
-                        case 4->{
+                        case 4 -> {
                             System.out.println("Consultas");
                             Consultas.Consultar();
                         }
-                        default -> {
-                            System.out.println("---INGRESE OPCION CORRECTA---");
-                        }
+
                     }
                     acceso = 3;
+                }while (eleccion!=5);
+                System.out.println("Powered by Console");
                 } else{
                     System.out.println("Contraseña incorrecta");
                     acceso = acceso + 1;

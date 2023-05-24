@@ -24,7 +24,7 @@ public class Consultas {
                         BufferedReader br = null;
 
                         try {
-                            archivo = new File("C://Users//rodri//IdeaProjects//Proyecto//src//Pruebas.txt");
+                            archivo = new File("registroactivacion.txt");
                             fr = new FileReader(archivo, Charset.forName("UTF-8"));
                             br = new BufferedReader(fr);
                             String linea;
@@ -50,7 +50,7 @@ public class Consultas {
                             BufferedReader br = null;
 
                             try {
-                                archivo = new File("C://Users//rodri//IdeaProjects//Proyecto//src//Pruebas.txt");
+                                archivo = new File("registrousuario.txt");
                                 fr = new FileReader(archivo, Charset.forName("UTF-8"));
                                 br = new BufferedReader(fr);
                                 String linea;

@@ -8,10 +8,10 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner obj = new Scanner(System.in);
-        System.out.println("Bienvenido al sistema de activacion y recargas");
+        System.out.println("SAR: SISTEMA DE ACTIVACION Y RECARGAS");
         IniciarSesion.inicioSesion();
         }
-        
+
     }
 
 
