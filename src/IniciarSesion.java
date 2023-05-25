@@ -18,7 +18,12 @@ public class IniciarSesion {
                 System.out.println("NIP CORRECTO");
                 System.out.println("    BIENVENIDO    ");
                 do {
-                    System.out.println("\n 1. Guardar Usuario 2.Activa tu línea, 3.Recarga Saldo, 4.Consultas 5. Salir");
+                    System.out.println("Selecciona una opcion\n" +
+                            " 1.Guardar Usuario,\n " +
+                            "2.Activa tu línea,\n " +
+                                    "3.Recarga Saldo,\n " +
+                                    "4.Consultas,\n " +
+                                    "5.Salir");
                     eleccion = datos.nextInt();
                     switch (eleccion) {
                         case 1 -> {

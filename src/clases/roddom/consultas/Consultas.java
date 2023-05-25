@@ -12,7 +12,7 @@ public class Consultas {
         Scanner obj = new Scanner(System.in);
         int eleccion;
         System.out.println("----CONSUTLAR----");
-        System.out.println("1. Numeros Activados    2.Informacion del usuario");
+        System.out.println("1. Numeros Activados\n2.Informacion del usuario");
         eleccion=obj.nextInt();
         if(eleccion>=1 && eleccion<=2) {
             switch (eleccion) {
