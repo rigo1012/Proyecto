@@ -15,7 +15,7 @@ public class RecargaSaldo {
         System.out.println("Bienvenido al Sistema de recargas");
         System.out.println("Ingrese el numero de telefono");
         numero = Leer.nextLine();
-        a = numero.length();//Valida o asigana el tamaño de la
+        a = numero.length();
         if (a == 10) {
             System.out.println("++++++++++");
             do {

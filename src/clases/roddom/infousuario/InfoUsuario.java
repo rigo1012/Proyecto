@@ -33,7 +33,7 @@ public class InfoUsuario {
             correo = obj.nextLine();
             datos = nombre + " " + apellidos + " " + correo;
 
-            bw.write("Usuario:" + " " + datos + "\n");
+            bw.write("\n Usuario:" + " " + datos + "\n");
 
         }catch (IOException e) {
             System.out.println(e);

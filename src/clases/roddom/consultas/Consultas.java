@@ -29,7 +29,7 @@ public class Consultas {
                             br = new BufferedReader(fr);
                             String linea;
                             while ((linea = br.readLine()) != null)
-                                System.out.println(linea);
+                                System.out.println(linea );
                         } catch (Exception e) {
                             e.printStackTrace();
                         } finally {
@@ -55,7 +55,7 @@ public class Consultas {
                                 br = new BufferedReader(fr);
                                 String linea;
                                 while ((linea = br.readLine()) != null)
-                                    System.out.println(linea);
+                                    System.out.println(linea+ "\n");
                             } catch (Exception e) {
                                 e.printStackTrace();
                             } finally {
